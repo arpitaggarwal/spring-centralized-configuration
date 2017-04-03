@@ -21,3 +21,11 @@ mvn spring-boot:run -Dspring.profiles.active=dev
 Above command will start the rest service loading `application-dev.properties` and accessible at http://localhost:8000/message
 
 Similar to Dev, we can start the rest-service using `test` and `staging` properties as `mvn spring-boot:run -Dspring.profiles.active=test` and `mvn spring-boot:run -Dspring.profiles.active=staging` respectively.
+
+### Refresh Rest Service Properties Values
+
+To get changed value from the configuration server to the client we need to refresh the client with the following command:
+
+```
+curl -X POST http://localhost:8000/refresh
+```
