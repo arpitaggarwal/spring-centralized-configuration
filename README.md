@@ -29,3 +29,12 @@ To get changed value from the configuration server to the client we need to refr
 ```
 curl -X POST http://localhost:8000/refresh
 ```
+
+### Property File changes not reflecting in rest-service?
+
+Whenever you modify any property file in `configstore` you have to make a git commit to reflect the changes in `config-server`, as:
+
+```
+git add .
+git commit -m "property file update"
+```
